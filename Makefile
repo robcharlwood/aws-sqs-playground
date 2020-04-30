@@ -52,3 +52,15 @@ install: setup
 
 black: check_poetry
 	poetry run black ./scripts --config=./pyproject.toml
+
+run_terraform:
+	cd terraform && terraform init && terraform apply
+
+delete_venv:
+	rm -rf .venv
+
+clean_up:
+	cd terraform && terraform destroy
+	rm -rf terraform/.terraform
+	rm -rf terraform/terraform.tfstate
+	rm -rf terraform/terraform.tfstate.backup
