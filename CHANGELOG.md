@@ -16,6 +16,12 @@ Types of changes are:
 
 ## Unreleased
 
+## v1.0.2
+
+## Changed - 2020-04-30
+
+* Renamed the CHANGELOG file to CHANGELOG.md.
+
 ## v1.0.1
 
 ## Changed - 2020-04-30
