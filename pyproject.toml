@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "aws-sqs-playground"
+version = "0.0.0"
+description = "AWS SQS Playground"
+authors = ["Rob Charlwood <rob@bitniftee.com>"]
+
+[tool.poetry.dependencies]
+python = "3.8.1"
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b0"
+
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
