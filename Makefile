@@ -51,4 +51,4 @@ setup: check_terraform check_python check_poetry
 install: setup
 
 black: check_poetry
-	poetry run black ./python --config=./pyproject.toml
+	poetry run black ./scripts --config=./pyproject.toml
