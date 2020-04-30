@@ -16,6 +16,12 @@ Types of changes are:
 
 ## Unreleased
 
+## v1.0.1
+
+## Changed - 2020-04-30
+
+* Added some fixes to avoid the hard coding of AWS account numbers into the python scripts.
+
 ## v1.0.0 - 2020-04-30
 
 ## Added

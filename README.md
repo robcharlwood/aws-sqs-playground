@@ -8,10 +8,15 @@ You will also require ``poetry`` to handle python dependencies. The ``make insta
 
 * ``make install``
 * ``make run_terraform``
+* Create a ``.env`` file in the root of the codebase with your aws account number in it
+
+```
+export AWS_ACCOUNT_NUMBER="{account_number_here}"
+```
 
 ### Testing the new queue
-* ``poetry run python ./scripts/send_msg.py``
-* ``poetry run python ./scripts/receive_msg.py``
+* ``source .env && poetry run python ./scripts/send_msg.py``
+* ``source .env && poetry run python ./scripts/receive_msg.py``
 
 Note that the receive message script runs constantly checking for new messages every 10 seconds.
 I suggest that you have two terminals running, one with the ``receive_msg.py`` process running and another to allow you to run ``send_msg.py`` to

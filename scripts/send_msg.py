@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 import datetime
+import os
 
 import boto3
 
 # create sqs client and define queue url
 session = boto3.Session(profile_name="aws-terraform-personal")
 sqs = session.client("sqs")
-queue_url = "https://sqs.eu-west-2.amazonaws.com/692597580273/sqs-queue"
+queue_url = (
+    f"https://sqs.eu-west-2.amazonaws.com/{os.getenv('AWS_ACCOUNT_NUMBER')}/sqs-queue"
+)
 
 # send message to sqs queue
 print("Sending message now!")
